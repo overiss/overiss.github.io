@@ -10,6 +10,7 @@
       --bg: #070b14;
       --bg-soft: #0d1424;
       --card: #101a2f;
+      --card-soft: #0f1a31;
       --text: #e6eeff;
       --muted: #9fb2d9;
       --primary: #4da3ff;
@@ -34,12 +35,13 @@
     }
 
     .wrap {
-      max-width: 980px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 32px 20px 56px;
+      padding: 30px 20px 64px;
     }
 
-    .hero {
+    .hero,
+    .block {
       border: 1px solid var(--border);
       background: linear-gradient(160deg, rgba(16, 26, 47, 0.95), rgba(13, 20, 36, 0.95));
       border-radius: 22px;
@@ -103,9 +105,11 @@
       gap: 14px;
     }
 
-    .card {
+    .card,
+    .project,
+    .timeline {
       border: 1px solid var(--border);
-      background: linear-gradient(160deg, rgba(16, 26, 47, 0.7), rgba(13, 20, 36, 0.8));
+      background: linear-gradient(160deg, rgba(16, 26, 47, 0.75), rgba(13, 20, 36, 0.88));
       border-radius: 16px;
       padding: 16px;
     }
@@ -164,6 +168,131 @@
       font-size: 12px;
     }
 
+    .stack-grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stack-group {
+      border: 1px solid var(--border);
+      background: linear-gradient(160deg, rgba(16, 26, 47, 0.65), rgba(13, 20, 36, 0.85));
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .stack-title {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #d8e7ff;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: rgba(77, 163, 255, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      color: #d4e4ff;
+    }
+
+    .block {
+      margin-top: 16px;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .block h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .block p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .kpis {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kpi {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(77, 163, 255, 0.08);
+    }
+
+    .kpi .value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #dcebff;
+    }
+
+    .kpi .label {
+      margin-top: 4px;
+      color: #9db4dd;
+      font-size: 12px;
+    }
+
+    .project-list {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .project h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #dce9ff;
+    }
+
+    .project p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .timeline-list {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .timeline h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #e1ecff;
+    }
+
+    .timeline .meta {
+      margin-top: 4px;
+      font-size: 13px;
+      color: #8ea6d1;
+    }
+
+    .timeline ul {
+      margin-top: 10px;
+    }
+
     .dot {
       color: var(--ok);
       font-weight: 800;
@@ -171,6 +300,12 @@
 
     @media (max-width: 760px) {
       .sections {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-grid,
+      .kpis,
+      .project-list {
         grid-template-columns: 1fr;
       }
 
@@ -196,6 +331,8 @@
         <span class="chip">Redis</span>
         <span class="chip">Kubernetes</span>
         <span class="chip">gRPC</span>
+        <span class="chip">Microservices</span>
+        <span class="chip">Observability</span>
       </div>
 
       <div class="sections">
@@ -224,6 +361,135 @@
 
       <div class="foot">
         <span class="dot">●</span> Open to challenging backend work and scalable product systems.
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>About</h2>
+      <p>
+        I have 4+ years of commercial backend/fullstack engineering experience. I build high-load systems
+        up to 90k+ RPS and focus on clean architecture, reliable delivery, and observability-first operations.
+      </p>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="value">4 years 7 months</div>
+          <div class="label">Total engineering experience</div>
+        </div>
+        <div class="kpi">
+          <div class="value">90k+ RPS</div>
+          <div class="label">High-load systems in production</div>
+        </div>
+        <div class="kpi">
+          <div class="value">1st / 1239</div>
+          <div class="label">WB Tech School graduation rank</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Core Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3 class="stack-title">Languages & Backend</h3>
+          <div class="tags">
+            <span class="tag">Go</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+            <span class="tag">C++</span><span class="tag">C#</span><span class="tag">PHP</span>
+            <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">gRPC</span>
+            <span class="tag">REST API</span><span class="tag">WebSocket</span><span class="tag">React Native</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3 class="stack-title">Data & Messaging</h3>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span>
+            <span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">ClickHouse</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3 class="stack-title">Infra & Observability</h3>
+          <div class="tags">
+            <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Prometheus</span>
+            <span class="tag">Jaeger</span><span class="tag">Grafana</span><span class="tag">Jenkins</span>
+            <span class="tag">Nginx</span><span class="tag">Thanos</span><span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Highlight Projects</h2>
+      <div class="project-list">
+        <article class="project">
+          <h3>Client App Core Backend (90k+ RPS)</h3>
+          <p>Built and launched high-load backend services for new client app functionality while maintaining performance under extreme traffic.</p>
+        </article>
+        <article class="project">
+          <h3>Pricing Core</h3>
+          <p>Worked on business-critical pricing and discount systems of a major marketplace after graduating top of a large internal tech program.</p>
+        </article>
+        <article class="project">
+          <h3>Monolith to Microservices Migration</h3>
+          <p>Migrated business logic from a distributed monolith into isolated Go microservices, reducing Time-to-Market by 2x.</p>
+        </article>
+        <article class="project">
+          <h3>Observability Platform</h3>
+          <p>Implemented monitoring and tracing based on Prometheus and Jaeger, reducing incident detection time from 20 to 3 minutes.</p>
+        </article>
+        <article class="project">
+          <h3>Cart & Checkout NDA Products</h3>
+          <p>Led backend delivery of multiple NDA initiatives with high availability and minimal bugs at launch.</p>
+        </article>
+        <article class="project">
+          <h3>LMS Platform for Online School</h3>
+          <p>Delivered a full-cycle LMS system with Go backend and React frontend; set up CI/CD with canary releases and resilient infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Experience</h2>
+      <div class="timeline-list">
+        <article class="timeline">
+          <h3>Backend Developer — Wildberries</h3>
+          <div class="meta">Oct 2022 - Present · Moscow</div>
+          <ul>
+            <li>Core domains: pricing infrastructure, client app core backend, and cart/checkout systems.</li>
+            <li>Worked on high-load core services ranging from 50k to 90k+ RPS.</li>
+            <li>Shipped reliability, architecture, and observability improvements in production-critical systems.</li>
+          </ul>
+        </article>
+        <article class="timeline">
+          <h3>Fullstack Developer — Freelance</h3>
+          <div class="meta">Sep 2021 - Oct 2022</div>
+          <ul>
+            <li>Designed and built LMS web platform for an online school (100+ active students).</li>
+            <li>Implemented Go backend and React frontend, plus Docker-based deployment.</li>
+            <li>Set up Jenkins CI/CD with canary strategy, reducing release time from 30 to 3 minutes.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Education & Courses</h2>
+      <div class="sections">
+        <article class="card">
+          <h2>Moscow Aviation Institute</h2>
+          <ul>
+            <li>Incomplete higher education, Computer Science and Engineering.</li>
+            <li>Track: Intelligent Monitoring Systems.</li>
+            <li>GPA: 4.1 / 5.0.</li>
+            <li>Expected graduation year: 2026.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Professional Courses</h2>
+          <ul>
+            <li>2024: Advanced PostgreSQL (WB Tech, Database Engineer).</li>
+            <li>2022: Goroutine-focused Golang (WB Tech School).</li>
+            <li>Graduated with honors and ranked 1st out of 1239 participants.</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
