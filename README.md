@@ -25,10 +25,6 @@
 ![PHP](https://img.shields.io/badge/PHP-111827?style=flat-square&logo=php&logoColor=A5B4FC)
 ![Node.js](https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=node.js&logoColor=4ADE80)
 ![Express.js](https://img.shields.io/badge/Express.js-111827?style=flat-square&logo=express&logoColor=E5E7EB)
-![Git](https://img.shields.io/badge/Git-111827?style=flat-square&logo=git&logoColor=FB7185)
-![gRPC](https://img.shields.io/badge/gRPC-111827?style=flat-square&logo=grpc&logoColor=60A5FA)
-![REST API](https://img.shields.io/badge/REST%20API-111827?style=flat-square&logo=fastapi&logoColor=34D399)
-![WebSocket](https://img.shields.io/badge/WebSocket-111827?style=flat-square&logo=socketdotio&logoColor=A78BFA)
 ![React Native](https://img.shields.io/badge/React%20Native-111827?style=flat-square&logo=react&logoColor=67E8F9)
 
 ### Data & messaging
@@ -39,6 +35,8 @@
 ![Redis](https://img.shields.io/badge/Redis-111827?style=flat-square&logo=redis&logoColor=F87171)
 ![Kafka](https://img.shields.io/badge/Kafka-111827?style=flat-square&logo=apachekafka&logoColor=E5E7EB)
 ![ClickHouse](https://img.shields.io/badge/ClickHouse-111827?style=flat-square&logo=clickhouse&logoColor=FACC15)
+![gRPC](https://img.shields.io/badge/gRPC-111827?style=flat-square&logo=grpc&logoColor=60A5FA)
+![WebSocket](https://img.shields.io/badge/WebSocket-111827?style=flat-square&logo=socketdotio&logoColor=A78BFA)
 
 ### Infra & observability
 
@@ -48,7 +46,6 @@
 ![Jaeger](https://img.shields.io/badge/Jaeger-111827?style=flat-square&logo=jaeger&logoColor=67E8F9)
 ![Grafana](https://img.shields.io/badge/Grafana-111827?style=flat-square&logo=grafana&logoColor=F59E0B)
 ![Jenkins](https://img.shields.io/badge/Jenkins-111827?style=flat-square&logo=jenkins&logoColor=FCA5A5)
-![Nginx](https://img.shields.io/badge/Nginx-111827?style=flat-square&logo=nginx&logoColor=4ADE80)
 ![Thanos](https://img.shields.io/badge/Thanos-111827?style=flat-square&logo=thanos&logoColor=A78BFA)
 
 ## Experience
